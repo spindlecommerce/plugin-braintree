@@ -1,0 +1,51 @@
+{
+  "name": "@spindlecommerce/plugin-braintree",
+  "version": "1.0.0",
+  "description": "Braintree for SpindleCommerce: card and PayPal payments through Braintree's GraphQL API, with captures, refunds and voids from the admin, and disputes kept in step by webhook.",
+  "keywords": [
+    "spindlecommerce",
+    "spindlecommerce-plugin",
+    "payments",
+    "braintree",
+    "paypal"
+  ],
+  "homepage": "https://github.com/spindlecommerce/plugin-braintree#readme",
+  "bugs": "https://github.com/spindlecommerce/plugin-braintree/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spindlecommerce/plugin-braintree.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24.12"
+  },
+  "packageManager": "pnpm@11.13.1",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "pnpm build"
+  },
+  "peerDependencies": {
+    "@spindlecommerce/plugin-sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@spindlecommerce/plugin-sdk": "^1.0.0",
+    "@types/node": "^24",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

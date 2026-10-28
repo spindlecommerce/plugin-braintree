@@ -1,0 +1,5 @@
+# Only install versions published at least two weeks ago (in minutes), except SpindleCommerce's own
+# packages, so a plugin can use a new SDK version as soon as it is released.
+minimumReleaseAge: 20160
+minimumReleaseAgeExclude:
+  - "@spindlecommerce/*"

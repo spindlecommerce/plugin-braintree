@@ -1,0 +1,12 @@
+{
+  // What gets published: JavaScript and type declarations in dist/. Installations load plugins from
+  // node_modules, where Node does not strip TypeScript types.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
